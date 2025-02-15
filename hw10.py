@@ -5,9 +5,9 @@ cursor = connection.cursor()
 
 cursor.execute("create table users (City text, temperature text, time text)")
 
-current_time = '14.11.2025'
+current_time = '15.11.2025'
 
-cursor.execute("insert into users (City, temperature, time) values ('Київ', '9°C', ?)", (current_time,))
+cursor.execute("insert into users (City, temperature, time) values ('Київ', '-4°C', ?)", (current_time,))
 
 cursor.execute("select * from users")
 print(cursor.fetchall())
